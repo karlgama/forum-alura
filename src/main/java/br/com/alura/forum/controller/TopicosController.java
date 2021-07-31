@@ -44,6 +44,7 @@ public class TopicosController {
 	private CursoRepository cursoRepository;
 	
 	@GetMapping
+	//apenas exemplo usar apenas para tabelas que dificilmente mudam
 	@Cacheable(value = "listaTopicos")
 	public Page<TopicoDTO> lista(@RequestParam(required = false) String curso,@PageableDefault(sort = "id", direction = Direction.DESC, page = 0, size = 10)
 								 Pageable paginacao) {				
