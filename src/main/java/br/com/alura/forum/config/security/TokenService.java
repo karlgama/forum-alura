@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import br.com.alura.forum.modelo.Usuario;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.UnsupportedJwtException;
 
 @Service
 public class TokenService {
@@ -38,7 +37,7 @@ public class TokenService {
 		try {
 			Jwts.parser().setSigningKey(this.secret).parseClaimsJws(token);		
 			return true;
-		} catch (UnsupportedJwtException e) {
+		} catch (Exception e) {
 			return false;			
 		}
 	}

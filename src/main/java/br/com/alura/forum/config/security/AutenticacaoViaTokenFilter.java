@@ -23,6 +23,7 @@ public class AutenticacaoViaTokenFilter extends OncePerRequestFilter{
 	
 	public AutenticacaoViaTokenFilter(TokenService tokenService, UsuarioRepository repository) {
 		this.tokenService = tokenService;
+		this.repository = repository;
 	}
 
 	@Override
@@ -41,7 +42,7 @@ public class AutenticacaoViaTokenFilter extends OncePerRequestFilter{
 
 	private void autenticarCliente(String token) {
 		Long idUsuario = tokenService.getIdUsuario(token);
-		Usuario usuario= repository.getById(idUsuario);
+		Usuario usuario= repository.findById(idUsuario).get();
 		UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(usuario, null, usuario.getAuthorities());
 		SecurityContextHolder.getContext().setAuthentication(authentication);	
 	}
@@ -51,7 +52,6 @@ public class AutenticacaoViaTokenFilter extends OncePerRequestFilter{
 		if(token == null || token.isEmpty() || !token.startsWith("Bearer ")) {
 			return null;			
 		}
-		
 		return token.substring(7,token.length());
 	}
 
