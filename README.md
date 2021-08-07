@@ -4,6 +4,6 @@
 
 ## Descrição do projeto
 
-<p align="justify">É um projeto para reproduzir a dinâmica do fórum alura, utilizando boas práticas de programação, DTO's, segurança, autenticação com <b>JWTToken</b>,m proteção de rotas e monitoramento da <b>API</b></p>
+<p align="justify">É um projeto para reproduzir a dinâmica do fórum alura, utilizando boas práticas de programação, DTO's, segurança, autenticação com <b>JWTToken</b>, proteção de rotas e monitoramento da <b>API</b></p>
 
 ## Ainda em progresso
