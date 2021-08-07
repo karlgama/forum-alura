@@ -9,10 +9,10 @@
 <li>Autenticação com <b>JWTToken</b></li>
 <li>Proteção de rotas usando <b>Spring Security</b>
 <li>monitoramento da <b>API.</b></li>
-E claro não poderia faltar documentação automatica usando o famoso <b>swagger springfox</b></p> 
+<li>E claro não poderia faltar documentação automatica usando o famoso <b>swagger springfox</b></p> </li>
 
 
-### Documentação, a porta e a url completa vai depender da sua aplicação caso queira rodar na sua máquina:smile: : '''/swagger-ui.html'''
+### Documentação, a porta e a url completa vai depender da sua aplicação caso queira rodar na sua máquina:`/swagger-ui.html` :smile:
 
 ### Projeto de monitoramento se encontra em outro repositório que é este <a href="https://github.com/karlgama/monitoramento-spring">aqui</a>: 
 
