@@ -4,6 +4,16 @@
 
 ## Descrição do projeto
 
-<p align="justify">É um projeto para reproduzir a dinâmica do fórum alura, utilizando boas práticas de programação, DTO's, segurança, autenticação com <b>JWTToken</b>, proteção de rotas e monitoramento da <b>API</b></p>
+<p align="justify">É um projeto para reproduzir a dinâmica do fórum alura, utilizando boas práticas de programação:
+<li>DTO's</li>
+<li>Autenticação com <b>JWTToken</b></li>
+<li>Proteção de rotas usando <b>Spring Security</b>
+<li>monitoramento da <b>API.</b></li>
+E claro não poderia faltar documentação automatica usando o famoso <b>swagger springfox</b></p> 
+
+
+### Documentação, a porta e a url completa vai depender da sua aplicação caso queira rodar na sua máquina:smile: : '''/swagger-ui.html'''
+
+### Projeto de monitoramento se encontra em outro repositório que é este <a href="https://github.com/karlgama/monitoramento-spring">aqui</a>: 
 
 ## Ainda em progresso

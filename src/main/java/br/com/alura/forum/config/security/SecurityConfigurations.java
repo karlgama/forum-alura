@@ -29,6 +29,13 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter{
 	@Autowired
 	private TokenService tokenService;
 	
+	private static final String[] AUTH_WHITELIST = {
+	        "/swagger-resources/**",
+	        "/swagger-ui.html",
+	        "/v2/api-docs",
+	        "/webjars/**"
+	};
+	
 	//configurações de autenticação
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {		
@@ -51,7 +58,7 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter{
 	//configurações de recursos estáticos(js,css,imgs, etc)
 	@Override
 	public void configure(WebSecurity web) throws Exception {
-
+		web.ignoring().antMatchers(AUTH_WHITELIST);
 	}
 	
 	@Override
