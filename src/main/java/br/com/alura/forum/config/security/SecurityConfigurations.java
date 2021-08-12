@@ -19,7 +19,7 @@ import br.com.alura.forum.repository.UsuarioRepository;
 
 @EnableWebSecurity
 @Configuration
-@Profile("prod")
+@Profile(value= {"prod","test"})
 public class SecurityConfigurations extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
@@ -66,8 +66,8 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter{
 	
 	@Override
 	@Bean
-	protected AuthenticationManager authenticationManager() throws Exception {		
-		return super.authenticationManager();
+	protected AuthenticationManager authenticationManager() throws Exception {
+	    return super.authenticationManager();
 	}
 	
 }
