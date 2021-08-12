@@ -7,9 +7,10 @@
 <p align="justify">É um projeto para reproduzir a dinâmica do fórum alura, utilizando boas práticas de programação:
 <li>DTO's</li>
 <li>Autenticação com <b>JWTToken</b></li>
-<li>Proteção de rotas usando <b>Spring Security</b>
+<li>Proteção de rotas usando <b>Spring Security</b></li>
 <li>monitoramento da <b>API.</b></li>
 <li>E claro não poderia faltar documentação automatica usando o famoso <b>swagger springfox</b></p> </li>
+<li>E testes automatizados com o <b>Junit</b></p> </li>
 
 
 ### Documentação, a porta e a url completa vai depender da sua aplicação caso queira rodar na sua máquina:`/swagger-ui.html` :smile:
