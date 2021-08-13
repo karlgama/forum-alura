@@ -35,7 +35,7 @@ class CursoRepositoryTest {
 		css.setCategoria("programacao");
 		em.persist(css);
 		
-		String nomeCurso = "HTML 5";
+		String nomeCurso = "css";
 		Curso curso = repository.findByNome(nomeCurso);
 		Assert.assertNotNull(curso);
 		Assert.assertEquals(nomeCurso, curso.getNome());
