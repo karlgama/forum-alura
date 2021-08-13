@@ -28,20 +28,20 @@
 
 ## Como rodar um jar?
 
-### Fácil só digitar no terminal do seu servidor ```java -jar arquivo.jar```
-### da mesma forma que você faria em um app standalone java
-### porém cuidado ao fazer deploy em um servidor você precisa indicar qual o profile que vai rodar a aplicação dessa forma ```java -jar -Dspring.profiles.active=prod arquivo.jar```
+#### Fácil só digitar no terminal do seu servidor ```java -jar arquivo.jar```
+#### da mesma forma que você faria em um app standalone java
+#### porém cuidado ao fazer deploy em um servidor você precisa indicar qual o profile que vai rodar a aplicação dessa forma ```java -jar -Dspring.profiles.active=prod arquivo.jar```
 
 ##
 ## como usar suas variáveis de ambiente?
 
-### fácil também para quem usa ambientes linux/mac basta apenas rodar no seu terminar export ```NOME_DA_SUA_VARIAVEL=VALOR_DA_SUA_VARIAVEL```
+#### fácil também para quem usa ambientes linux/mac basta apenas rodar no seu terminar export ```NOME_DA_SUA_VARIAVEL=VALOR_DA_SUA_VARIAVEL```
 
-### exemplo prático vamos supor que minha variável FORUM_DATABASE_USERNAME fosse "teste" então eu rodaria:
+#### exemplo prático vamos supor que minha variável FORUM_DATABASE_USERNAME fosse "teste" então eu rodaria:
 ```export FORUM_DATABASE_USERNAME=teste ```
 
-### Uma forma mais rústica seria assim:
-### ```java -jar -Dspring.profiles.active=prod -DFORUM_DATABASE_URL=jdbc:h2:mem:alura-forum -DFORUM_DATABASE_USERNAME=sa -DFORUM_DATABASE_PASSWORD= -DFORUM_JWT_SECRET=123456 seuarquivo.jar```
+#### Uma forma mais rústica seria assim:
+#### ```java -jar -Dspring.profiles.active=prod -DFORUM_DATABASE_URL=jdbc:h2:mem:alura-forum -DFORUM_DATABASE_USERNAME=sa -DFORUM_DATABASE_PASSWORD= -DFORUM_JWT_SECRET=123456 seuarquivo.jar```
 
 ##
 ## É possível, se for necessário gerar um arquivo do tipo war
@@ -49,3 +49,11 @@
 E por último é necessário herdar da classe SpringBootInitializer na sua classe principal e sobreescrever o método configure e retornar:</p> 
 
 ```builder.sources(suaClassePrincipal.class)```
+
+## É claro podemos usar docker
+### Existe um dockerfile no projeto para montar uma imagem com jdk 11, crie a imagem usando ```sudo docker build -t nomeDaImagemQueVocêQuer .``` dentro do diretório onde se encontra o dockerfile, isso é um docker bem simplificado existe muitas outras coisas possíveis de se colocar e fazer com a docker.
+
+### Depois que a image for criada para rodar a imagem use:
+```sudo docker run -p 8080:8080 -e SPRING_PROFILES_ACTIVE='profile que quer usar' -e FORUM_DATA_BASE_URL='suaUrlDeBanco' -e FORUM_DATABASE_USERNAME='seuUsuarioDoBanco' -e FORUM_DATABASE_PASSWORD='suaSenhaDoBanco' -e FORUM_JWT_SECRET='seuSecret' nomeDaImagem```
+### claro o comando acima pode ser alterado de acordo com a necessidade como por exemplo a porta que a aplicação vai rodar
+### Se não quiser ficar executando com sudo os comandos apenas adicione seu usuário ao grupo docker
