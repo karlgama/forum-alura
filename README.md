@@ -8,6 +8,7 @@
 <li>DTO's</li>
 <li>Autenticação com <b>JWTToken</b></li>
 <li>Proteção de rotas usando <b>Spring Security</b></li>
+<li>Paginação</li>
 <li>monitoramento da <b>API.</b></li>
 <li>E claro não poderia faltar documentação automatica usando o famoso <b>swagger springfox</b> </li><li>E testes automatizados com o <b>Junit</b></p> </li></p>
 
@@ -43,5 +44,5 @@
 ### Existe um dockerfile no projeto para montar uma imagem com jdk 11, crie a imagem usando ```sudo docker build -t nomeDaImagemQueVocêQuer .``` dentro do diretório onde se encontra o dockerfile, isso é um docker bem simplificado existe muitas outras coisas possíveis de se colocar e fazer com a docker.
 
 ### Depois que a image for criada para rodar a imagem use:
-#### ```sudo docker run -p 8080:8080 -e SPRING_PROFILES_ACTIVE='profile que quer usar' -e FORUM_DATA_BASE_URL='suaUrlDeBanco' -e FORUM_DATABASE_USERNAME='seuUsuarioDoBanco' -e FORUM_DATABASE_PASSWORD='suaSenhaDoBanco' -e FORUM_JWT_SECRET='seuSecret' nomeDaImagem```
+#### ```sudo docker run -p 8080:8080 -e SPRING_PROFILES_ACTIVE='profile que quer usar' -e FORUM_DATABASE_URL='suaUrlDeBanco' -e FORUM_DATABASE_USERNAME='seuUsuarioDoBanco' -e FORUM_DATABASE_PASSWORD='suaSenhaDoBanco' -e FORUM_JWT_SECRET='seuSecret' nomeDaImagem```
 #### claro o comando acima pode ser alterado de acordo com a necessidade como por exemplo a porta que a aplicação vai rodar se não quiser ficar executando com sudo os comandos apenas adicione seu usuário ao grupo docker.
