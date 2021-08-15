@@ -47,4 +47,4 @@
 #### ```sudo docker run -p 8080:8080 -e SPRING_PROFILES_ACTIVE='profile que quer usar' -e FORUM_DATABASE_URL='suaUrlDeBanco' -e FORUM_DATABASE_USERNAME='seuUsuarioDoBanco' -e FORUM_DATABASE_PASSWORD='suaSenhaDoBanco' -e FORUM_JWT_SECRET='seuSecret' nomeDaImagem```
 #### claro o comando acima pode ser alterado de acordo com a necessidade como por exemplo a porta que a aplicação vai rodar se não quiser ficar executando com sudo os comandos apenas adicione seu usuário ao grupo docker.
 
-## Heroku deploy: https://forum-alura-kaique.herokuapp.com/topicos
+#### O deploy foi realizado no heroku, porém o link não está mais disponivel com se trata apenas de um projeto didático, não renovarei a URL.
